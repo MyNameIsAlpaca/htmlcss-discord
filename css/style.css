@@ -61,12 +61,14 @@ body {
     justify-content: center;
 }
 
+
 .description-inner {
     width: 800px;
     height: 300px;
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
+    margin-bottom: 100px;
 }
 
 #title {
@@ -77,7 +79,6 @@ body {
 
 .description-inner p {
     color: white;
-    width: 100%;
     text-align: center;
     font-size: 20px;
 }
@@ -123,22 +124,38 @@ body {
     height: 430px;
 }
 
-.article-title {
-    background-color: orange;
-    display: flex;
+.small-size > .article-title {
     flex-grow: 2;
 }
 
-.article-description {
-    background-color: yellow;
-    display: flex;
+.small-size > .article-description {
     flex-grow: 1;
 }
 
+.article-title {
+    display: flex;
+    font-size: 50px;
+}
+
+.wave {
+    filter: invert(99%) sepia(1%) saturate(1%) hue-rotate(256deg) brightness(116%) contrast(93%);
+    margin: -5px 0px
+}
+
+.wave-revert {
+    transform: rotate(180deg);
+    transform: scaley(-1);
+}
+
+.article-description {
+    display: flex;
+    font-size: 20px;
+}
+
 .big-size {
-    background-color: bisque;
+    background-color: #f6f6f6;
     width: auto;
-    height: 840px;
+    height: 660px;
     display: flex;
     flex-flow: row-reverse nowrap;
     justify-content: center;
@@ -146,8 +163,13 @@ body {
     gap: 70px;
 }
 
+.big-size > .article-info {
+    gap: 20px;
+
+}
+
 .last-article {
-    background-color: bisque;
+    background-color: #f6f6f6;
     width: auto;
     height: 1300px;
     display: flex;
@@ -158,40 +180,43 @@ body {
 }
 
 .last-article-info {
-    background-color: white;
-    width: 1000px;
-    height: 135px;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 30px;
 }
 
 .last-article-title {
-    background-color: blue;
-    width: 1000px;
-    height: 50px;
-    
+    font-size: 40px;
 }
 
 .last-article-description {
- background-color: red;
- width: 1000px;
- height: calc(100% - 50px);
+    text-align: center;
+    font-size: 20px;
 }
 
 .last-article-image {
-background-color: white;
-width: 1120px;
-height: 575px;
 }
 
 .last-article-conclusion {
-    background-color: black;
+    color: black;
     width: 610px;
     height: 60px;
+    text-align: center;
+    font-size: 30px;
+    background-image: url(../img/stars.svg);
+    background-size: contain;
+    background-position: 20px;
+    font-weight: 700;
+    padding-top: 20px;
 }
 
-.last-article-download {
-    background-color: #255ee9;
-    height: 50px;
-    width: 200px;
+.last-button{
+  font-size: 20px;
+  background-color: #7289da;
+  color: white;
+  padding: 20px;
 }
 
 footer {
@@ -218,28 +243,51 @@ footer {
 
 .footer-info {
     width: 240px;
-    height: 175px;
+    height: 200px;
     display: flex;
     flex-flow: column wrap;
-    gap: 15px;
+    gap: 30px;
 }
 
 #title-footer {
-    background-color: azure;
-    width: 230px;
-    height: 70px;
+    color: #7289da;
+    font-size: 30px;
+    max-width: 230px;
+    max-height: 70px;
 }
 
-#lingua {
-    background-color: green;
+.lingua {
     width: 95px;
     height: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+
+.lingua img {
+    max-width: 30px;
+    max-height: 20px;
+}
+
+.lingua div  {
+    color: white;
+}
+
+.lingua div span {
+    font-size: 7px;
 }
 
 #social {
-    background-color: #255ee9;
-    width: 150px;
-    height: 25px;
+    max-width: 70px;
+    max-height: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+.social-logo {
+    max-width: calc(100% / 4);
+    max-height: 100%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(67deg) brightness(105%) contrast(102%);
 }
 
 .footer-top ul {
@@ -249,10 +297,14 @@ footer {
     gap: 10px;
 }
 
+.footer-top ul h4 {
+color: #6e82c6;
+}
+
 .footer-top ul li {
-    background-color: red;
-    width: 70px;
+    width: 110px;
     height: 20px;
+    color: white;
 }
 
 .footer-bottom {
