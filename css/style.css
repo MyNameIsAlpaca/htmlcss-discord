@@ -319,7 +319,6 @@ color: #6e82c6;
 #logo-footer {
    width: 130px;
    height: 35px;
-   background-color: white; 
 }
 
 #register {
@@ -327,3 +326,9 @@ color: #6e82c6;
     height: 35px;
     background-color: white; 
  }
+
+ .register-button{
+    background-color: #7289da;
+    color: white;
+    padding: 10px;
+  }
