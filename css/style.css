@@ -139,7 +139,7 @@ body {
 
 .wave {
     filter: invert(99%) sepia(1%) saturate(1%) hue-rotate(256deg) brightness(116%) contrast(93%);
-    margin: -5px 0px
+    display: block;
 }
 
 .wave-revert {
